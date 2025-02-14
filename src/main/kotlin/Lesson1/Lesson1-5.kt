@@ -1,8 +1,12 @@
- fun main() {
+fun main() {
     val seconds: Int = 6480
-    val minutes: Int = seconds/60
-    val hours: Int = minutes/60
-    val remaindersOfMinutes = minutes%60
-    val remainderOfSeconds: Int = remaindersOfMinutes/60
-    println("0$hours:$remaindersOfMinutes:$remainderOfSeconds$remainderOfSeconds")
+    val divisorOfTime = 60
+    val minutes: Int = seconds / divisorOfTime
+    val hours: Int = minutes / divisorOfTime
+    val remaindersOfMinutes: Int = minutes % divisorOfTime
+    val remainderOfSeconds: Int= remaindersOfMinutes / divisorOfTime
+
+    val timeInSpace = String.format("0%d:%d:0%d", hours, remaindersOfMinutes, remainderOfSeconds)
+
+    println(timeInSpace)
 }

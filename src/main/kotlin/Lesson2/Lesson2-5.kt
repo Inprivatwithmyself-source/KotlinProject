@@ -6,8 +6,9 @@ fun main() {
     val contribution = 70000
     val yearsOfContribution = 20.0
 
-    val compoundPercent = contribution * ((1 + percent/100).pow(yearsOfContribution))
+    val compoundPercent = contribution * ((1 + PERCENT / 100).pow(yearsOfContribution))
 
     println(String.format("%.3f", compoundPercent))
 }
-const val percent = 16.7
+
+const val PERCENT = 16.7

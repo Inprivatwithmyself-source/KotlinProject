@@ -6,7 +6,10 @@ fun main() {
     val wetNow = 20
     val seasonNow = "зима"
 
-    val naturalCondition = (weatherNow == WEATHER) && (tentNow == TENT) && (wetNow == WET_AIR) && (seasonNow == SEASON)
+    val naturalCondition = (weatherNow == WEATHER) &&
+            (tentNow == TENT) &&
+            (wetNow == WET_AIR) &&
+            (seasonNow != SEASON)
 
     println("Благоприятные ли условия сейчас для роста бобовых? $naturalCondition")
 
@@ -15,4 +18,4 @@ fun main() {
 const val WEATHER = "солнечная"
 const val TENT = "открыт"
 const val WET_AIR = 20
-const val SEASON = "не зима"
+const val SEASON = "зима"
